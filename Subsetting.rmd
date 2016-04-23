@@ -509,6 +509,7 @@ info <- data.frame(
 )
 ```
 
+
 We want to duplicate the info table so that we have a row for each value in `grades`. We can do this in two ways, either using `match()` and integer subsetting, or `rownames()` and character subsetting: \indexc{match()}
 
 ```{r}
@@ -517,6 +518,7 @@ grades
 # Using match
 id <- match(grades, info$grade)
 info[id, ]
+info[grades,] directly work it out no need id transition 
 
 # Using rownames
 rownames(info) <- info$grade
